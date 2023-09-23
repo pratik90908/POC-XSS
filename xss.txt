@@ -1,0 +1,22 @@
+#  Exploit Title: Online Clothing Store - Stored Cross-Site Scripting
+#  Date: 9/23/2023
+#  Exploit Author: Pratik Dahal
+# Vendor Homepage: https://www.sourcecodester.com/php/14185/online-clothing-store.html
+# Software Link: https://www.sourcecodester.com/sites/default/files/download/oretnom23/online-clothing-store.zip
+# Version: 1.0
+# Tested On: Windows 11 + XAMPP V3.3.0
+
+#Vulnerable Page: Categories.php
+#Parameter Vulnerable: Category Name and Description
+
+ONLINE CLOTHING STORE is vulnerable to Stored XSS
+
+Admin user can add malicious script to offer page.
+when a normal user visit a page. A script gets executed.
+
+# Exploit:
+	Open Categories.php or just navigate to add categories logged in as admin
+	Add the payload in Category Name and Description
+		```<img src=x onerror=alert(1)>```
+	Save
+            
